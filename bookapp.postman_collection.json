@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "7754ee5f-4c76-4e86-8d86-1619d5c9314c",
+		"name": "bookapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"test3\",\n    \"Email\": \"t3@gmail.com\",\n    \"ReferredUser\":\"61fa8024a99e8d7a966ceaa0\"\n\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/create/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"create",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\" : \"61fa80bda99e8d7a966ceaaa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/payment/new",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"payment",
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
